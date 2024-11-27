@@ -98,6 +98,8 @@ export const useClearCache = (props?: OwnProps) => {
             setIsLatestVersion(true);
             setLoading(false);
           }
+        }).catch((error) => {
+            console.error('Error fetching version data:', error);
         });
     } catch (err) {
       console.error(err);
